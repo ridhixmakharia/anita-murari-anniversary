@@ -81,6 +81,7 @@ body {
   z-index: 2;
   text-align: center;
   padding: 2rem;
+  width: 100%;
 }
 
 .names {
@@ -108,6 +109,14 @@ body {
   animation: shimmer 8s linear infinite;
 
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7));
+
+  /* Flex container for responsive layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 
 @keyframes shimmer {
@@ -142,4 +151,18 @@ body {
 /* Canvas for particles */
 canvas {
   opacity: 0.3;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .names {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+
+  .ampersand {
+    font-size: 0.6em;
+    /* Make ampersand slightly smaller on mobile */
+    margin: 0.2em 0;
+  }
 }
