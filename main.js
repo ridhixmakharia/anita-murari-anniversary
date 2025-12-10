@@ -1,6 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Anniversary script loaded');
   const root = document.documentElement;
 
   // Spotlight effect tracking mouse
